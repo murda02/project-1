@@ -8,7 +8,31 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1 id="title">Movie and Food Finder</h1>
+    <div class="big-container">
+        <div class="card">
+            <h2>Movie</h2>
+            <form method="post">
+                <label for="genre">Movie Genre</label>
+                <input type="text" id="genre" name="genre"><br>
+                <label for="score">Movie Score</label>
+                <input type="text" id="score" name="score"><br>
+                <label for="runtime">Movie Runtime</label>
+                <input type="text" id="runtime" name="runtime"><br>
+                <button id="movie-btn">Submit</button>
+            </form>
+        </div>
+        <div class="card">
+            <h2>Food</h2>
+            <form>
+                <label for="zip">Zipcode</label>
+                <input type="text" id="zip" name="zip"><br>
+                <label for="food-type">Type of Food</label>
+                <input type="text" id="food-type" name="food-type"><br>
+                <button id="food-btn">Submit</button>
+            </form>
+        </div>
+    </div>
 </body>
 <script src="./assets/js/script.js"></script>
 </html>
