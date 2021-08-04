@@ -131,3 +131,4 @@ async function makeUrl(genre, releaseYear, runtime) {
     console.log(api_url);
     getMovieApi(api_url);
 }
+
