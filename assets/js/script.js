@@ -2,7 +2,8 @@
 let movieBtn = document.getElementById('movie-btn');
 let foodBtn = document.getElementById('food-btn');
 
-/* Add button functionality to store movie and food query data into arrays */
+/* Functionality for submit buttons */
+// Movie submit button takes in genre, release year, and runtime, checks to make sure all exist, then runs makeUrl, otherwise alerts user to fill out info.
 movieBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
@@ -17,20 +18,29 @@ movieBtn.addEventListener('click', (event) => {
     }
 })
 
+// Food submit button takes in zipcode and cuisine type, checkes to make sure both exist, then computes the cuisine formatting function, builds the url, and extracts data from it, otherwise alerts user to fill out info.
 foodBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
     let zip = document.querySelector('#zip').value;
-    //let foodType = document.querySelector('#food-type').value;
+    let foodType = document.querySelector('#food-type').value;
 
-    let api_url = `https://api.documenu.com/v2/restaurants/zip_code/${zip}?key=f2ebf71e0ef21c8d0f7d37673878b79d`;
+    if (zip && foodType) {
+        computeFood(foodType);
 
-    getFoodApi(api_url);
-})
+        let api_url = `https://api.documenu.com/v2/restaurants/zip_code/${zip}?${parseFood}key=f2ebf71e0ef21c8d0f7d37673878b79d`;
 
+        getFoodApi(api_url);
+    } else {
+        alert("fill out all fields");
+    }  
+});
+
+/* Asynchronous functions to run through URLs and pull out desired data */
 async function getFoodApi(url) {
     const response = await fetch(url);
     var objects = await response.json();
+    console.log(objects);
     for (let i = 0; i < objects.data.length; i++) {
         console.log(objects.data[i].restaurant_name);
     }
@@ -45,7 +55,7 @@ async function getMovieApi(url) {
     }
 }
 
-// Genre
+// Function to compute the url formatting for genre based on user input
 function computeGenre(inputGenre) {
     if (inputGenre) {
         inputGenre = inputGenre.toLowerCase();
@@ -111,16 +121,17 @@ function computeGenre(inputGenre) {
     }
 }
 
-// Release year
+// Function to compute the url formatting based on user input for release year
 function computeYear(inputYear) {
     if (inputYear) parseYear = `&release_date.gte=${inputYear}`;
 }
 
-// Runtime
+// Function to compute the url formatting based on user input for runtime
 function computeTime(inputTime) {
     inputTime && (parseTime = `&with_runtime.gte=${inputTime}`);
 }
 
+// Function that develops the movie url by running all three compute functions above, and building the url with the results, then pulling data from the url
 async function makeUrl(genre, releaseYear, runtime) {
     await computeGenre(genre);
     await computeYear(releaseYear);
@@ -128,6 +139,77 @@ async function makeUrl(genre, releaseYear, runtime) {
     
     
     let api_url = `https://api.themoviedb.org/3/discover/movie?with_original_language=en${parseGenre}${parseYear}${parseTime}&sort_by=popularity.desc&api_key=a65d471e819b0a6c43ded7506d323429`;
-    console.log(api_url);
     getMovieApi(api_url);
+}
+
+// Computes formatting for cuisine type for restaraunt api
+function computeFood(inputFood) {
+    if (inputFood) {
+        inputFood = inputFood.toLowerCase();
+        switch (inputFood) {
+            case "italian": 
+                parseFood = "cuisine=italian&";
+                break;
+            case "american":
+                parseFood = "cuisine=american&";
+                break;
+            case "chicken": 
+                parseFood = "cuisine=chicken&";
+                break;
+            case "burgers": 
+                parseFood = "cuisine=burgers&";
+                break;
+            case "salads": 
+                parseFood = "cuisine=salads&";
+                break;
+            case "sandwiches": 
+                parseFood = "cuisine=sandwiches&";
+                break;
+            case "soups": 
+                parseFood = "cuisine=soups&";
+                break;
+            case "subs": 
+                parseFood = "cuisine=subs&";
+                break;
+            case "chinese": 
+                parseFood = "cuisine=chinese&";
+                break;
+            case "vietnamese": 
+                parseFood = "cuisine=vietnamese&";
+                break;
+            case "pizza": 
+                parseFood = "cuisine=pizza&";
+                break;
+            case "seafood": 
+                parseFood = "cuisine=seafood&";
+                break;
+            case "indian": 
+                parseFood = "cuisine=indian&";
+                break;
+            case "asian": 
+                parseFood = "cuisine=asian&";
+                break;
+            case "diner": 
+                parseFood = "cuisine=diner&";
+                break;
+            case "healthy": 
+                parseFood = "cuisine=healthy&";
+                break;
+            case "irish": 
+                parseFood = "cuisine=irish&";
+                break;
+            case "mediterranean": 
+                parseFood = "cuisine=mediterranean&";
+                break;
+            case "noodles": 
+                parseFood = "cuisine=noodles&";
+                break;
+            case "steak": 
+                parseFood = "cuisine=steak&";
+                break;
+            case "vegetarian": 
+                parseFood = "cuisine=vegetarian&";
+                break;
+        }
+    }
 }
