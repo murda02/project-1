@@ -16,3 +16,15 @@ body {
     padding: 0 20px;
     text-align: center;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    background: rgb(230, 165, 165);
+    padding: 10px;
+    width: 260px;
+    top: 100px;
+    left: calc(50% - 140px);
+    z-index: 1;
+    border-radius: 10px;
+}
