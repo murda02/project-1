@@ -142,6 +142,7 @@ async function makeUrl(genre, releaseYear, runtime) {
     getMovieApi(api_url);
 }
 
+
 // Computes formatting for cuisine type for restaraunt api
 function computeFood(inputFood) {
     if (inputFood) {
@@ -213,3 +214,4 @@ function computeFood(inputFood) {
         }
     }
 }
+
