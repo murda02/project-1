@@ -1,6 +1,8 @@
 /* Pull in elements by ID from HTML */
 let movieBtn = document.getElementById('movie-btn');
 let foodBtn = document.getElementById('food-btn');
+let closeBtn = document.querySelector('#close-btn');
+let popupModal = document.querySelector('.modal');
 
 /* Functionality for submit buttons */
 // Movie submit button takes in genre, release year, and runtime, checks to make sure all exist, then runs makeUrl, otherwise alerts user to fill out info.
@@ -14,8 +16,13 @@ movieBtn.addEventListener('click', (event) => {
     if (genre && releaseYear && runtime) {
         makeUrl(genre, releaseYear, runtime);
     } else {
-        alert("fill out all fields");
+        // alert("fill out all fields");
+        popupModal.style.display = 'block';
     }
+})
+
+closeBtn.addEventListener('click', function() {
+    popupModal.style.display = 'none';
 })
 
 // Food submit button takes in zipcode and cuisine type, checkes to make sure both exist, then computes the cuisine formatting function, builds the url, and extracts data from it, otherwise alerts user to fill out info.
