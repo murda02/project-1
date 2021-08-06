@@ -20,7 +20,7 @@ body {
 .modal {
     display: none;
     position: fixed;
-    background: rgb(230, 165, 165);
+    background: rgb(236, 41, 41);
     padding: 10px;
     width: 260px;
     top: 100px;
