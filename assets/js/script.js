@@ -39,7 +39,8 @@ foodBtn.addEventListener('click', (event) => {
 
         getFoodApi(api_url);
     } else {
-        alert("fill out all fields");
+        // alert("fill out all fields");
+        popupModal.style.display = 'block';
     }  
 });
 
