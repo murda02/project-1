@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,29 @@
     <title>Movie Query</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
-    <h1 id="title">Movie and Food Finder</h1>
+    <section class="hero is-primary">
+        <div class="hero-body">
+            <p class="title">
+                The Best Movies!
+            </p>
+            <p class="subtitle">
+                The Best Food!
+            </p>
+        </div>
+    </section>
+    </div>
     <div class="big-container">
         <div class="card">
-            <h2>Movie</h2>
+            <h1>Movie</h1>
             <form method="post">
                 <label for="genre">Movie Genre</label>
-                <input type="text" id="genre" name="genre"><br>
+                <input type="text" id="genre" name="genre" placeholder="what are we watching?"><br>
                 <label for="year">Movie's Made After</label>
-                <input type="text" id="year" name="year"><br>
+                <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
                 <label for="runtime">Movie Runtime</label>
-                <input type="text" id="runtime" name="runtime"><br>
+                <input type="text" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
                 <button id="movie-btn">Submit</button>
                 <div class="modal">
                     <h2>Error!</h2>
@@ -31,9 +43,9 @@
             <h2>Food</h2>
             <form>
                 <label for="zip">Zipcode</label>
-                <input type="text" id="zip" name="zip"><br>
+                <input type="text" id="zip" name="zip" placeholder="where you at?"><br>
                 <label for="food-type">Type of Food</label>
-                <input type="text" id="food-type" name="food-type"><br>
+                <input type="text" id="food-type" name="food-type" placeholder="what are we eating?"><br>
                 <button id="food-btn">Submit</button>
                 <div class="modal">
                     <h2>Error!</h2>
@@ -45,4 +57,5 @@
     </div>
 </body>
 <script src="./assets/js/script.js"></script>
+
 </html>
