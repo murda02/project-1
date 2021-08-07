@@ -146,12 +146,12 @@ function computeGenre(inputGenre) {
 
 // Function to compute the url formatting based on user input for release year
 function computeYear(inputYear) {
-    if (inputYear) parseYear = `&release_date.gte=${inputYear}`;
+    if (inputYear) parseYear = `&primary_release_year=${inputYear}`;
 }
 
 // Function to compute the url formatting based on user input for runtime
 function computeTime(inputTime) {
-    inputTime && (parseTime = `&with_runtime.gte=${inputTime}`);
+    inputTime && (parseTime = `&with_runtime.lte=${inputTime}`);
 }
 
 // Function that develops the movie url by running all three compute functions above, and building the url with the results, then pulling data from the url
