@@ -1,28 +1,32 @@
 /* Pull in elements by ID from HTML */
 let movieBtn = document.getElementById('movie-btn');
 let foodBtn = document.getElementById('food-btn');
+let closeBtn = document.querySelector('#close-btn');
+let popupModal = document.querySelector('.modal');
 
 function myGenre() {
     var genreList = document.getElementById("genreList");
     document.getElementById("selected-genre").value = genreList.options[genreList.selectedIndex].text;
-    }
-    function myFood() {
-      var foodList = document.getElementById("foodList");
-      document.getElementById("selected-food").value = foodList.options[foodList.selectedIndex].text;
-      }
+}
+
+function myFood() {
+    var foodList = document.getElementById("foodList");
+    document.getElementById("selected-food").value = foodList.options[foodList.selectedIndex].text;
+}
+
 /* Functionality for submit buttons */
 // Movie submit button takes in genre, release year, and runtime, checks to make sure all exist, then runs makeUrl, otherwise alerts user to fill out info.
 movieBtn.addEventListener('click', (event) => {
     event.preventDefault();
-
-    let genre = document.querySelector('#genre').value;
+    console.log(document.querySelector('#selected-genre'))
+    let genre = document.querySelector('#selected-genre').value;
     let releaseYear = document.querySelector('#year').value;
     let runtime = document.querySelector('#runtime').value;
     
     if (genre && releaseYear && runtime) {
         makeUrl(genre, releaseYear, runtime);
     } else {
-        alert("fill out all fields");
+        popupModal.style.display = 'block';
     }
 })
 
@@ -31,7 +35,7 @@ foodBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
     let zip = document.querySelector('#zip').value;
-    let foodType = document.querySelector('#food-type').value;
+    let foodType = document.querySelector('#selected-food').value;
 
     if (zip && foodType) {
         computeFood(foodType);
@@ -42,6 +46,10 @@ foodBtn.addEventListener('click', (event) => {
     } else {
         alert("fill out all fields");
     }  
+});
+
+closeBtn.addEventListener('click', function() {
+    popupModal.style.display = 'none';
 });
 
 /* Asynchronous functions to run through URLs and pull out desired data */
