@@ -25,6 +25,28 @@
         <div class="card">
             <h1>Movie</h1>
             <form method="post">
+                <b> Select your movie genre from the list </b>
+                <select id = "genreList" onchange = "myGenre()" >
+                <option> action</option>
+                <option> adventure </option>
+                <option> animation </option>
+                <option> comedy </option>
+                <option> crime </option>
+                <option> documentary </option>
+                <option> drama </option>
+                <option> family </option>
+                <option> fantasy </option>
+                <option> history </option>
+                <option> horror </option>
+                <option> music </option>
+                <option> mystery </option>
+                <option> romance </option>
+                <option> science fiction </option>
+                <option> tv movie </option>
+                <option> thriller </option>
+                <option> war </option>
+                <option> western </option>
+                </select>
                 <label for="genre">Movie Genre</label>
                 <input type="text" id="genre" name="genre" placeholder="what are we watching?"><br>
                 <label for="year">Movie's Made After</label>
@@ -46,7 +68,36 @@
             <h2>Food</h2>
             <form>
                 <label for="zip">Zipcode</label>
+
+                <input type="text" id="zip" name="zip"><br>
+                <form method="post">
+                    <b> Select your food type from the list   </b>
+                    <select id = "foodList" onchange = "myFood()" >
+                    <option> italian </option>
+                    <option> american </option>
+                    <option> chicken </option>
+                    <option> burgers </option>
+                    <option> salads </option>
+                    <option> sandwiches </option>
+                    <option> soups </option>
+                    <option> subs </option>
+                    <option> chinese </option>
+                    <option> vietnamese </option>
+                    <option> pizza </option>
+                    <option> seafood </option>
+                    <option> indian </option>
+                    <option> asian </option>
+                    <option> diner </option>
+                    <option> healthy </option>
+                    <option> irish </option>
+                    <option> mediterranean </option>
+                    <option> noodles </option>
+                    <option> steak </option>
+                    <option> vegetarian </option>
+                    </select>
+
                 <input type="text" id="zip" name="zip" placeholder="where you at?"><br>
+
                 <label for="food-type">Type of Food</label>
                 <input type="text" id="food-type" name="food-type" placeholder="what are we eating?"><br>
                 <button id="food-btn">Submit</button>

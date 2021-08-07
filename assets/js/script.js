@@ -2,6 +2,14 @@
 let movieBtn = document.getElementById('movie-btn');
 let foodBtn = document.getElementById('food-btn');
 
+function myGenre() {
+    var genreList = document.getElementById("genreList");
+    document.getElementById("selected-genre").value = genreList.options[genreList.selectedIndex].text;
+    }
+    function myFood() {
+      var foodList = document.getElementById("foodList");
+      document.getElementById("selected-food").value = foodList.options[foodList.selectedIndex].text;
+      }
 /* Functionality for submit buttons */
 // Movie submit button takes in genre, release year, and runtime, checks to make sure all exist, then runs makeUrl, otherwise alerts user to fill out info.
 movieBtn.addEventListener('click', (event) => {
