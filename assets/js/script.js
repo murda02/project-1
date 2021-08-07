@@ -1,8 +1,6 @@
 /* Pull in elements by ID from HTML */
 let movieBtn = document.getElementById('movie-btn');
 let foodBtn = document.getElementById('food-btn');
-let closeBtn = document.querySelector('#close-btn');
-let popupModal = document.querySelector('.modal');
 
 function myGenre() {
     var genreList = document.getElementById("genreList");
@@ -24,13 +22,8 @@ movieBtn.addEventListener('click', (event) => {
     if (genre && releaseYear && runtime) {
         makeUrl(genre, releaseYear, runtime);
     } else {
-        // alert("fill out all fields");
-        popupModal.style.display = 'block';
+        alert("fill out all fields");
     }
-})
-
-closeBtn.addEventListener('click', function() {
-    popupModal.style.display = 'none';
 })
 
 // Food submit button takes in zipcode and cuisine type, checkes to make sure both exist, then computes the cuisine formatting function, builds the url, and extracts data from it, otherwise alerts user to fill out info.
@@ -47,8 +40,7 @@ foodBtn.addEventListener('click', (event) => {
 
         getFoodApi(api_url);
     } else {
-        // alert("fill out all fields");
-        popupModal.style.display = 'block';
+        alert("fill out all fields");
     }  
 });
 
@@ -56,9 +48,11 @@ foodBtn.addEventListener('click', (event) => {
 async function getFoodApi(url) {
     const response = await fetch(url);
     var objects = await response.json();
-    console.log(objects);
+    let foodList = document.getElementById("food-list");
     for (let i = 0; i < objects.data.length; i++) {
-        console.log(objects.data[i].restaurant_name);
+        var foodTitle = document.createElement("li");
+        foodTitle.appendChild(document.createTextNode(objects.data[i].restaurant_name));
+        foodList.appendChild(foodTitle);
     }
 }
 
@@ -66,8 +60,11 @@ async function getMovieApi(url) {
     const response = await fetch(url);
     var objects = await response.json();
     console.log(objects);
+    let movieList = document.getElementById("movie-list");
     for (let i = 0; i < 5; i++) {
-        console.log(objects.results[i].original_title);
+        var movieTitle = document.createElement("li");
+        movieTitle.appendChild(document.createTextNode(objects.results[i].original_title));
+        movieList.appendChild(movieTitle);
     }
 }
 
@@ -158,7 +155,6 @@ async function makeUrl(genre, releaseYear, runtime) {
     getMovieApi(api_url);
 }
 
-
 // Computes formatting for cuisine type for restaraunt api
 function computeFood(inputFood) {
     if (inputFood) {
@@ -230,4 +226,3 @@ function computeFood(inputFood) {
         }
     }
 }
-
