@@ -57,6 +57,7 @@ async function getFoodApi(url) {
     const response = await fetch(url);
     var objects = await response.json();
     let foodList = document.getElementById("food-list");
+    foodList.innerHTML = "";
     for (let i = 0; i < objects.data.length; i++) {
         var foodTitle = document.createElement("li");
         foodTitle.appendChild(document.createTextNode(objects.data[i].restaurant_name));
@@ -69,6 +70,7 @@ async function getMovieApi(url) {
     var objects = await response.json();
     console.log(objects);
     let movieList = document.getElementById("movie-list");
+    movieList.innerHTML = "";
     for (let i = 0; i < 5; i++) {
         var movieTitle = document.createElement("li");
         movieTitle.appendChild(document.createTextNode(objects.results[i].original_title));
