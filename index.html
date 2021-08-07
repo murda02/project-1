@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Query</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 
 <body>
@@ -50,10 +50,10 @@
                 </select>
                 <label for="genre">Movie Genre</label>
                 <input type="text" id="selected-genre" name="genre"><br>
-                <label for="year">Movie's Made After</label>
+                <label for="year">Movie's Made in</label>
                 <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
-                <label for="runtime">Movie Runtime</label>
-                <input type="text" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
+                <label for="runtime">Movie Runtime less than</label>
+                <input type="number" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
                 <button id="movie-btn">Submit</button>
                 <div class="modal">
                     <h2>Error!</h2>
@@ -111,6 +111,6 @@
         </div>
     </div>
 </body>
-<script src="./assets/js/script.js"></script>
+<script src="./assets/script.js"></script>
 
 </html>
