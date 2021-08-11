@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinner & a Movie</title>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 <body>
@@ -16,50 +18,53 @@
         </div>
     </section>
     </div>
-    <div class="big-container">
-        <div class="card">
-            <h2>Food</h2>
-            <form>
-                <label for="zip">Zipcode</label>
-                <input type="text" id="zip" name="zip"><br>
-                <form method="post">
-                    <b> Select your food type from the list   </b>
-                    <select id = "foodList">
-                    <option> CHOOSE HERE</option>
-                    <option> italian </option>
-                    <option> american </option>
-                    <option> chicken </option>
-                    <option> burgers </option>
-                    <option> salads </option>
-                    <option> sandwiches </option>
-                    <option> soups </option>
-                    <option> subs </option>
-                    <option> chinese </option>
-                    <option> vietnamese </option>
-                    <option> pizza </option>
-                    <option> seafood </option>
-                    <option> indian </option>
-                    <option> asian </option>
-                    <option> diner </option>
-                    <option> healthy </option>
-                    <option> irish </option>
-                    <option> mediterranean </option>
-                    <option> noodles </option>
-                    <option> steak </option>
-                    <option> vegetarian </option>
-                    </select>
-                <br>
-                <button id="food-btn">Submit</button>
-                <div class="modal">
-                    <h2>Error!</h2>
-                    <p>Please fill in all text fields</p>
-                    <button id='close-btn'>Close</button>
+        <body>
+            <div class="container">
+                <div class="card">
+                    <h2>Food</h2>
+                    <form>
+                        <label for="zip">Zipcode</label>
+                        <input type="text" id="zip" name="zip"><br>
+                        <form method="post">
+                            <b> Select your food type from the list   </b>
+                            <select id = "foodList">
+                            <option> CHOOSE HERE</option>
+                            <option> italian </option>
+                            <option> american </option>
+                            <option> chicken </option>
+                            <option> burgers </option>
+                            <option> salads </option>
+                            <option> sandwiches </option>
+                            <option> soups </option>
+                            <option> subs </option>
+                            <option> chinese </option>
+                            <option> vietnamese </option>
+                            <option> pizza </option>
+                            <option> seafood </option>
+                            <option> indian </option>
+                            <option> asian </option>
+                            <option> diner </option>
+                            <option> healthy </option>
+                            <option> irish </option>
+                            <option> mediterranean </option>
+                            <option> noodles </option>
+                            <option> steak </option>
+                            <option> vegetarian </option>
+                            </select>
+                        <br>
+                        <button id="food-btn">Submit</button>
+                        <div class="modal">
+                            <h2>Error!</h2>
+                            <p>Please fill in all text fields</p>
+                            <button id='close-btn'>Close</button>
+                        </div>
+                    </form>
+                    <ul id="food-list">
+        
+                    </ul>
                 </div>
-            </form>
-            <ul id="food-list">
-
-            </ul>
-        </div>
+            </div>
+          </body>
         <div class="card">
             <h1>Movie</h1>
             <form method="post">
