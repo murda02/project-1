@@ -28,7 +28,7 @@ movieBtn.addEventListener('click', (event) => {
     if (genre && releaseYear && runtime) {
         makeUrl(genre, releaseYear, runtime);
     } else {
-        popupModal.style.display = 'block';
+        popupModal.style.display='block';
     }
 })
 
@@ -42,7 +42,7 @@ foodBtn.addEventListener('click', (event) => {
     if (zip && foodType) {
         computeFood(foodType);
 
-        let api_url = `https://api.documenu.com/v2/restaurants/zip_code/${zip}?${parseFood}key=f2ebf71e0ef21c8d0f7d37673878b79d`;
+        let api_url = `https://api.documenu.com/v2/restaurants/zip_code/${zip}?${parseFood}size=5&key=f2ebf71e0ef21c8d0f7d37673878b79d`;
 
         getFoodApi(api_url);
     } else {
