@@ -7,7 +7,7 @@ body {
     }
   }
 .big-container {
-    justify-content: center;
+    width: 90%;
 }
 
 .card {
@@ -35,19 +35,14 @@ body {
 }
 
 
-.hero {
+.hero-body {
     padding: 14%;
-    width: 30%;
-    justify-content: space-evenly;
+    margin: 0 20%;
+    justify-content: center;
     background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("http://tidayton.org/wp-content/uploads/2016/03/DinnerMoviePhoto.jpg");
-    width: 100%;
+    width: 32%;
     height: auto;
-    color: whitesmoke;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    text-align: center;
-    font-size: 2.3rem;
-    font-style: italic;
-     
+    background-size: 100% 100%;
 }
 
 
