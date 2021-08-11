@@ -5,65 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Query</title>
+    <title>Dinner & a Movie</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <section class="hero is-primary">
         <div class="hero-body">
-            <p class="title">
-                The Best Movies!
-            </p>
-            <p class="subtitle">
-                The Best Food!
-            </p>
+            <h1 class="title">Dinner & a Movie</h1>
         </div>
     </section>
     </div>
     <div class="big-container">
-        <div class="card">
-            <h1>Movie</h1>
-            <form method="post">
-                <b> Select your movie genre from the list </b>
-                <select id="genreList">
-                <option> CHOOSE HERE</option>
-                <option> action</option>
-                <option> adventure </option>
-                <option> animation </option>
-                <option> comedy </option>
-                <option> crime </option>
-                <option> documentary </option>
-                <option> drama </option>
-                <option> family </option>
-                <option> fantasy </option>
-                <option> history </option>
-                <option> horror </option>
-                <option> music </option>
-                <option> mystery </option>
-                <option> romance </option>
-                <option> science fiction </option>
-                <option> tv movie </option>
-                <option> thriller </option>
-                <option> war </option>
-                <option> western </option>
-                </select>
-                <br>
-                <label for="year">Movie's Made in</label>
-                <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
-                <label for="runtime">Movie Runtime less than</label>
-                <input type="number" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
-                <button id="movie-btn">Submit</button>
-                <div class="modal">
-                    <h2>Error!</h2>
-                    <p>Please fill in all text fields</p>
-                    <button id='close-btn'>Close</button>
-                </div>
-            </form>
-            <ul id="movie-list">
-
-            </ul>
-        </div>
         <div class="card">
             <h2>Food</h2>
             <form>
@@ -104,6 +57,48 @@
                 </div>
             </form>
             <ul id="food-list">
+
+            </ul>
+        </div>
+        <div class="card">
+            <h1>Movie</h1>
+            <form method="post">
+                <b> Select your movie genre from the list </b>
+                <select id="genreList">
+                <option> CHOOSE HERE</option>
+                <option> action</option>
+                <option> adventure </option>
+                <option> animation </option>
+                <option> comedy </option>
+                <option> crime </option>
+                <option> documentary </option>
+                <option> drama </option>
+                <option> family </option>
+                <option> fantasy </option>
+                <option> history </option>
+                <option> horror </option>
+                <option> music </option>
+                <option> mystery </option>
+                <option> romance </option>
+                <option> science fiction </option>
+                <option> tv movie </option>
+                <option> thriller </option>
+                <option> war </option>
+                <option> western </option>
+                </select>
+                <br>
+                <label for="year">Movie's Made in</label>
+                <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
+                <label for="runtime">Movie Runtime less than</label>
+                <input type="number" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
+                <button id="movie-btn">Submit</button>
+                <div class="modal">
+                    <h2>Error!</h2>
+                    <p>Please fill in all text fields</p>
+                    <button id='close-btn'>Close</button>
+                </div>
+            </form>
+            <ul id="movie-list">
 
             </ul>
         </div>
