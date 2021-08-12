@@ -15,93 +15,93 @@
     <section class="hero is-primary">
         <div class="hero-body"></div>
     </section>
-    <div class="big-container">
-        <div class="card">
-            <h2>Food</h2>
-            <form>
-                <label for="zip">Zipcode</label>
-                <input type="text" id="zip" name="zip"><br>
-                <form method="post">
-                    <b> Select your food type from the list   </b>
-                    <select id = "foodList">
-                    <option> CHOOSE HERE</option>
-                    <option> italian </option>
-                    <option> american </option>
-                    <option> chicken </option>
-                    <option> burgers </option>
-                    <option> salads </option>
-                    <option> sandwiches </option>
-                    <option> soups </option>
-                    <option> subs </option>
-                    <option> chinese </option>
-                    <option> vietnamese </option>
-                    <option> pizza </option>
-                    <option> seafood </option>
-                    <option> indian </option>
-                    <option> asian </option>
-                    <option> diner </option>
-                    <option> healthy </option>
-                    <option> irish </option>
-                    <option> mediterranean </option>
-                    <option> noodles </option>
-                    <option> steak </option>
-                    <option> vegetarian </option>
-                    </select>
-                <br>
-                <button id="food-btn">Submit</button>
-                <div class="modal">
-                    <h2>Error!</h2>
-                    <p>Please fill in all text fields</p>
-                    <button id='close-btn'>Close</button>
-                </div>
-            </form>
-            <ul id="food-list">
 
-            </ul>
+    <div class="divider"></div>
+    <div class="section">
+      <h1>food</h1>
+       <form>
+        <label for="zip">Zipcode</label>
+        <input type="text" id="zip" name="zip" placeholder="where you at"><br>
+        <form method="post">
+            <P>what are you eating?</P> 
+            <select id = "foodList">
+            <option> CHOOSE HERE</option>
+            <option> italian </option>
+            <option> american </option>
+            <option> chicken </option>
+            <option> burgers </option>
+            <option> salads </option>
+            <option> sandwiches </option>
+            <option> soups </option>
+            <option> subs </option>
+            <option> chinese </option>
+            <option> vietnamese </option>
+            <option> pizza </option>
+            <option> seafood </option>
+            <option> indian </option>
+            <option> asian </option>
+            <option> diner </option>
+            <option> healthy </option>
+            <option> irish </option>
+            <option> mediterranean </option>
+            <option> noodles </option>
+            <option> steak </option>
+            <option> vegetarian </option>
+            </select>
+        <br>
+        <button id="food-btn">Submit</button>
+        <div class="modal">
+            <h2>Error!</h2>
+            <p>Please fill in all text fields</p>
+            <button id='close-btn'>Close</button>
         </div>
-        <div class="card">
-            <h1>Movie</h1>
-            <form method="post">
-                <b> Select your movie genre from the list </b>
-                <select id="genreList">
-                <option> CHOOSE HERE</option>
-                <option> action</option>
-                <option> adventure </option>
-                <option> animation </option>
-                <option> comedy </option>
-                <option> crime </option>
-                <option> documentary </option>
-                <option> drama </option>
-                <option> family </option>
-                <option> fantasy </option>
-                <option> history </option>
-                <option> horror </option>
-                <option> music </option>
-                <option> mystery </option>
-                <option> romance </option>
-                <option> science fiction </option>
-                <option> tv movie </option>
-                <option> thriller </option>
-                <option> war </option>
-                <option> western </option>
-                </select>
-                <br>
-                <label for="year">Movie's Made in</label>
-                <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
-                <label for="runtime">Movie Runtime less than</label>
-                <input type="number" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
-                <button id="movie-btn">Submit</button>
-                <div class="modal">
-                    <h2>Error!</h2>
-                    <p>Please fill in all text fields</p>
-                    <button id='close-btn'>Close</button>
-                </div>
-            </form>
-            <ul id="movie-list">
+    </form>
+    <ul id="food-list"></ul>
+</div>
 
-            </ul>
+
+    
+    <div class="divider"></div>
+    <div class="section">
+      <h2>movies</h2>
+      <p> <form method="post">
+        <p>what are you watching?</p>
+        <select id="genreList">
+        <option> CHOOSE HERE</option>
+        <option> action</option>
+        <option> adventure </option>
+        <option> animation </option>
+        <option> comedy </option>
+        <option> crime </option>
+        <option> documentary </option>
+        <option> drama </option>
+        <option> family </option>
+        <option> fantasy </option>
+        <option> history </option>
+        <option> horror </option>
+        <option> music </option>
+        <option> mystery </option>
+        <option> romance </option>
+        <option> science fiction </option>
+        <option> tv movie </option>
+        <option> thriller </option>
+        <option> war </option>
+        <option> western </option>
+        </select>
+        <br>
+        <label for="year">Movie's Made in</label>
+        <input type="text" id="year" name="year" placeholder="pick the year!!"><br>
+        <label for="runtime">Movie Runtime less than</label>
+        <input type="number" id="runtime" name="runtime" placeholder="how much time do you have?"><br>
+        <button id="movie-btn">Submit</button>
+        <div class="modal">
+            <h2>Error!</h2>
+            <p>Please fill in all text fields</p>
+            <button id='close-btn'>Close</button>
         </div>
-    </div>
+    </form>
+    <ul id="movie-list"></ul>
+</div>    
 </body>
 <script src="./assets/js/script.js"></script>
 
