@@ -61,9 +61,11 @@ label {
 button {
     border-radius: 10%;
     padding: 2%;
+    font-size: 1rem;
+    margin-top: 15px;
 }
 
-button{
+button {
     -webkit-appearance: button;
 }
 
