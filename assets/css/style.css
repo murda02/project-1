@@ -50,6 +50,7 @@ body {
 
 
 h1 {
+    padding-top: 3%;
     padding: 8%;
     font-size: 2.0rem;
     color: lavender;
@@ -83,8 +84,8 @@ p {
     font-size: 2.0rem;
 
 }
- 
-form {
-    padding: 4%;
-}
 
+ul{
+    border-color: tomato;
+    color: white;
+}
